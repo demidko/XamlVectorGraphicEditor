@@ -15,7 +15,8 @@ using System.Windows.Shapes;
 
 partial class MyRectangle : Border
 {
-    private static int LastZIndex = 1;
+    private static MyRectangle Top = null;
+    private static int LastZIndex;
 
     public MyRectangle(in Point whereSetMe)
     {
@@ -23,22 +24,27 @@ partial class MyRectangle : Border
         ContextMenu.AddPaletteHeader(new ShapeBackgroundChanger(this));
         Canvas.SetLeft(this, whereSetMe.X);
         Canvas.SetTop(this, whereSetMe.Y);
-        Canvas.SetZIndex(this, 1);
+        LastZIndex = Canvas.GetZIndex(this);
     }
 
     private void RectMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
     {
-        CaptureMouse();
+        if (Top != null)
+        {
+            Top.BorderBrush = Brushes.Red;
+            Top.BorderThickness = new Thickness(0);
+        }
+        Top = this;
         Canvas.SetZIndex(this, ++LastZIndex);
-        BorderBrush = Brushes.Red;
+        CaptureMouse();
         BorderThickness = new Thickness(2);
     }
 
     private void RectMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
     {
         ReleaseMouseCapture();
-        BorderBrush = Brushes.Black;
-        BorderThickness = new Thickness(0.5);
+        BorderBrush = Brushes.Yellow;
+        BorderThickness = new Thickness(1);
     }
 }
 

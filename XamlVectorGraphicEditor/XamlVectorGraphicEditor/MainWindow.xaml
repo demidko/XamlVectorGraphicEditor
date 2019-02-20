@@ -1,0 +1,18 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Homework"
+        WindowState="Maximized">
+    <Canvas Name="MainCanvas" 
+            Background="Transparent"
+            MouseLeftButtonDown="MainCanvasMouseDown" 
+            MouseMove="MainCanvasMouseMove" 
+            MouseLeftButtonUp="MainCanvasMouseUp"
+            MouseRightButtonDown="SaveContextPoint">
+        <Canvas.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Прямоугольник" Click="RectangleClick"/>
+            </ContextMenu>
+        </Canvas.ContextMenu>
+    </Canvas>
+</Window>

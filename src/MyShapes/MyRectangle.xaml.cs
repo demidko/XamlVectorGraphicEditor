@@ -17,6 +17,7 @@ partial class MyRectangle : Border
 {
     private static MyRectangle Top = null;
     private static int LastZIndex;
+    private double LastRotate = 0;
 
     public MyRectangle(in Point whereSetMe)
     {
@@ -46,5 +47,25 @@ partial class MyRectangle : Border
         BorderBrush = Brushes.Yellow;
         BorderThickness = new Thickness(1);
     }
+
+    private void DeleteClick(object sender, RoutedEventArgs e) => (VisualParent as Canvas).Children.Remove(this);
+
+    private void Rotate(in int angle) => RenderTransform = new RotateTransform(LastRotate += angle, Height / 2, Width / 2);
+
+    private void RotateRight(in uint angle) => Rotate((int)angle);
+
+    private void RotateLeft(in uint angle) => Rotate(-(int)angle);
+
+    private void Right10Click(object sender, RoutedEventArgs e) => RotateRight(10);
+
+    private void Right30Click(object sender, RoutedEventArgs e) => RotateRight(30);
+
+    private void Right60Click(object sender, RoutedEventArgs e) => RotateRight(60);
+
+    private void Left10Click(object sender, RoutedEventArgs e) => RotateLeft(10);
+
+    private void Left30Click(object sender, RoutedEventArgs e) => RotateLeft(30);
+
+    private void Left60Click(object sender, RoutedEventArgs e) => RotateLeft(60);
 }
 

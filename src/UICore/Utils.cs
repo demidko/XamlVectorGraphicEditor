@@ -26,6 +26,7 @@ static class Utils
             item.Click += (o, e) => changer.Background = brush;
             palette.Items.Add(item);
         }
-        root.Items.Add(palette);
+        root.Items.Insert(0, palette);
+        
     }
 }

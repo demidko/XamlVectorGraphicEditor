@@ -1,0 +1,13 @@
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\bin\Release\Homework.exe
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\bin\Release\Homework.pdb
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\Homework.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\MainWindow.baml
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\MainWindow.g.cs
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\App.g.cs
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\Homework_MarkupCompile.cache
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\Homework.g.resources
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\Homework.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\Homework.exe
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\Homework.pdb
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\MyShapes\MyRectangle.baml
+C:\Users\Admin\Desktop\JavaAndJsLanguages2\obj\Release\MyShapes\MyRectangle.g.cs

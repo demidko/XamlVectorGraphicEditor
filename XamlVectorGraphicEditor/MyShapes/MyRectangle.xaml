@@ -3,9 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Height="100"
         Width="100"
-        Background="WhiteSmoke"
+        Background="LightBlue"
         MouseLeftButtonDown="RectMouseLeftButtonDown"
         MouseLeftButtonUp="RectMouseLeftButtonUp"
-        BorderBrush="Red">
-    
+        BorderThickness="0.5"
+        BorderBrush="Black">
+    <Border.ContextMenu>
+        <ContextMenu/>
+    </Border.ContextMenu>
 </Border>

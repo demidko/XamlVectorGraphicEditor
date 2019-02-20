@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Media;
 
-class PanelBackgroundChanger : IBackgroundChanger
+struct PanelBackgroundChanger : IBackgroundChanger
 {
     private readonly Panel MyPanel;
 

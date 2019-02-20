@@ -57,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BackgroundChangers\ShapeBackgroundChanger.cs" />
     <Compile Include="BackgroundChangers\IBackgroundChanger.cs" />
     <Compile Include="MyShapes\MyRectangle.xaml.cs">
       <DependentUpon>MyRectangle.xaml</DependentUpon>

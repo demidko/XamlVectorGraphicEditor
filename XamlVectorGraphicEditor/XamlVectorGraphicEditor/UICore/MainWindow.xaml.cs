@@ -31,7 +31,7 @@ public partial class MainWindow : Window
     HitType MouseHitType = HitType.None;
 
     // Return a HitType value to indicate what is at the point.
-    private HitType SetHitType(UIElement rect, Point point)
+    private HitType SetHitType(in UIElement rect, in Point point)
     {
         double left = Canvas.GetLeft(CurrentObject);
         double top = Canvas.GetTop(CurrentObject);
@@ -207,21 +207,19 @@ public partial class MainWindow : Window
     }
 
     // Stop dragging.
-    private void MainCanvasMouseUp(object sender, MouseButtonEventArgs e) => DragInProgress = false;
+    private void MainCanvasMouseUp(object sender, MouseButtonEventArgs e) =>  DragInProgress = false;
 
     public MainWindow()
     {
         InitializeComponent();
-        ContextMenu.AddPaletteHeader(new PanelBackgroundChanger(MainCanvas));
+        MainCanvas.ContextMenu.AddPaletteHeader(new PanelBackgroundChanger(MainCanvas));
     }
 
     // Last point where context menu was been opened
     private Point LastContextMenuPoint;
 
-    private void RectangleClick(object sender, RoutedEventArgs e) => 
-        MainCanvas.Children.Add(new MyRectangle(LastContextMenuPoint));
+    private void RectangleClick(object sender, RoutedEventArgs e) => MainCanvas.Children.Add(new MyRectangle(LastContextMenuPoint));
 
-    private void SaveContextPoint(object sender, MouseButtonEventArgs e) => 
-        LastContextMenuPoint = e.GetPosition(MainCanvas);
+    private void SaveContextPoint(object sender, MouseButtonEventArgs e) => LastContextMenuPoint = e.GetPosition(MainCanvas);
 }
 

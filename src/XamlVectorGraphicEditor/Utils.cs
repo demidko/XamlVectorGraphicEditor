@@ -6,12 +6,14 @@ using System.Windows;
 
 static class Utils
 {
-    public static void AddPaletteHeader(this ContextMenu root, IBackgroundChanger changer)
+    public static void AddPaletteHeader(this ContextMenu root, IBackgroundChanger changer, in string header = "Палитра")
     {
         var palette = new MenuItem()
         {
-            Header = "Палитра"
+            Header = header
+            
         };
+        
         foreach (var inf in typeof(Brushes).GetProperties(BindingFlags.Static | BindingFlags.Public))
         {
             var brush = inf.GetValue(null) as SolidColorBrush;
@@ -26,6 +28,7 @@ static class Utils
             item.Click += (o, e) => changer.Background = brush;
             palette.Items.Add(item);
         }
+        
         root.Items.Insert(0, palette);
         
     }

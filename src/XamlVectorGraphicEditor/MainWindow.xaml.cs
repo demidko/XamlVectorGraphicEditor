@@ -22,7 +22,7 @@ public partial class MainWindow : Window
     };
 
     // Current object for dragging
-    private MyRectangle CurrentObject;
+    private AbstractShape CurrentObject;
     // True if a drag is in progress.
     private bool DragInProgress = false;
     // The drag's last point.
@@ -97,13 +97,13 @@ public partial class MainWindow : Window
         if (Cursor != desired_cursor) Cursor = desired_cursor;
     }
 
-    private MyRectangle GetCurrentShape(in Point p)
+    private AbstractShape GetCurrentShape(in Point p)
     {
         if (VisualTreeHelper.HitTest(MainCanvas, p) is var hit && hit == null)
         {
             return null;
         }
-        return hit.VisualHit is Shape child ? child.Parent as MyRectangle : hit.VisualHit as MyRectangle;
+        return hit.VisualHit is Shape child ? child.Parent as AbstractShape : hit.VisualHit as AbstractShape;
     }
 
     // Start dragging.
@@ -218,8 +218,11 @@ public partial class MainWindow : Window
     // Last point where context menu was been opened
     private Point LastContextMenuPoint;
 
-    private void RectangleClick(object sender, RoutedEventArgs e) => MainCanvas.Children.Add(new MyRectangle(LastContextMenuPoint));
+    private void RectangleClick(object sender, RoutedEventArgs e) => 
+        MainCanvas.Children.Add(new MyRectangle(LastContextMenuPoint));
 
     private void SaveContextPoint(object sender, MouseButtonEventArgs e) => LastContextMenuPoint = e.GetPosition(MainCanvas);
+
+    private void TriangleClick(object sender, RoutedEventArgs e) => MainCanvas.Children.Add(new MyTriangle(LastContextMenuPoint));
 }
 

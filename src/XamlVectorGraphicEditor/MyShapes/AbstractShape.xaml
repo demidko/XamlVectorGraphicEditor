@@ -1,0 +1,22 @@
+﻿<Border x:Class="AbstractShape"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="100"
+        Width="100"
+        Background="Transparent"
+        MouseLeftButtonDown="RectMouseLeftButtonDown"
+        MouseLeftButtonUp="RectMouseLeftButtonUp"
+        BorderBrush="Black"
+        
+        BorderThickness="0.2">
+    <Border.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Клонировать" Click="CloneClick"/>
+            <MenuItem Header="Повернуть на 10°" Click="Right10Click"/>
+            <MenuItem Header="Повернуть на 30°" Click="Right30Click"/>
+            <MenuItem Header="Повернуть на 60°;" Click="Right60Click"/>
+            <MenuItem Header="Повернуть на 90°;" Click="Right90Click"/>
+            <MenuItem Header="Удалить" Click="DeleteClick"/>
+        </ContextMenu>
+    </Border.ContextMenu>
+</Border>

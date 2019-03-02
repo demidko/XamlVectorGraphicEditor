@@ -11,7 +11,17 @@
             MouseRightButtonDown="SaveContextPoint">
         <Canvas.ContextMenu>
             <ContextMenu>
-                <MenuItem Header="Прямоугольник" Click="RectangleClick"/>
+                <MenuItem Header="Прямоугольник" Click="RectangleClick">
+                    <MenuItem.Icon>
+                        <Rectangle Fill="LightBlue"  Stroke="Black" StrokeThickness="1"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Треугольник" Click="TriangleClick">
+                    <MenuItem.Icon>
+                        <Polygon Fill="LightPink" Points="0, 1, 1, 0, 2, 1" Stroke="Black" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Показать слои"/>
             </ContextMenu>
         </Canvas.ContextMenu>
     </Canvas>

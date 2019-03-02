@@ -1,0 +1,13 @@
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\bin\Release\XamlVectorGraphicEditor.exe
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\bin\Release\XamlVectorGraphicEditor.pdb
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\XamlVectorGraphicEditor.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\App.g.cs
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\XamlVectorGraphicEditor_MarkupCompile.cache
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\XamlVectorGraphicEditor.g.resources
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\XamlVectorGraphicEditor.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\XamlVectorGraphicEditor.exe
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\XamlVectorGraphicEditor.pdb
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\MyShapes\AbstractShape.baml
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\MyShapes\AbstractShape.g.cs
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\MainWindow.baml
+C:\Users\Admin\Desktop\XamlVectorGraphicEditor\XamlVectorGraphicEditor\obj\Release\MainWindow.g.cs

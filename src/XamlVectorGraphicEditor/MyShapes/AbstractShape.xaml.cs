@@ -97,6 +97,9 @@ partial class AbstractShape : Border
         Shape newShape;
         switch (otherShape)
         {
+            case Ellipse elli:
+                newShape = new Ellipse();
+                break;
             case Polygon poly:
                 newShape = new Polygon()
                 {

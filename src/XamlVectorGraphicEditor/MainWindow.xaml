@@ -21,7 +21,13 @@
                         <Polygon Fill="LightPink" Points="0, 1, 1, 0, 2, 1" Stroke="Black" Stretch="Fill"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Показать слои"/>
+                <MenuItem Header="Эллипс" Click="EllipseClick">
+                    <MenuItem.Icon>
+                        <Ellipse Fill="LightCoral"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Очистить холст" Click="ClearClick"/>
+                <MenuItem Header="Сохранить как" Click="SaveClick"/>
             </ContextMenu>
         </Canvas.ContextMenu>
     </Canvas>

@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Windows.Markup;
 
 public partial class MainWindow : Window
 {
@@ -126,7 +126,7 @@ public partial class MainWindow : Window
     // Otherwise display the correct cursor.
     private void MainCanvasMouseMove(object sender, MouseEventArgs e)
     {
-        if(CurrentObject == null)
+        if (CurrentObject == null)
         {
             return;
         }
@@ -207,7 +207,7 @@ public partial class MainWindow : Window
     }
 
     // Stop dragging.
-    private void MainCanvasMouseUp(object sender, MouseButtonEventArgs e) =>  DragInProgress = false;
+    private void MainCanvasMouseUp(object sender, MouseButtonEventArgs e) => DragInProgress = false;
 
     public MainWindow()
     {
@@ -218,11 +218,28 @@ public partial class MainWindow : Window
     // Last point where context menu was been opened
     private Point LastContextMenuPoint;
 
-    private void RectangleClick(object sender, RoutedEventArgs e) => 
+    private void RectangleClick(object sender, RoutedEventArgs e) =>
         MainCanvas.Children.Add(new MyRectangle(LastContextMenuPoint));
 
     private void SaveContextPoint(object sender, MouseButtonEventArgs e) => LastContextMenuPoint = e.GetPosition(MainCanvas);
 
     private void TriangleClick(object sender, RoutedEventArgs e) => MainCanvas.Children.Add(new MyTriangle(LastContextMenuPoint));
+
+    private void EllipseClick(object sender, RoutedEventArgs e) => MainCanvas.Children.Add(new MyEllipse(LastContextMenuPoint));
+
+    private void ClearClick(object sender, RoutedEventArgs e) => MainCanvas.Children.Clear();
+
+    private void SaveClick(object sender, RoutedEventArgs e)
+    {
+        if (new Microsoft.Win32.SaveFileDialog()
+        {
+            FileName = "Canvas",
+            DefaultExt = ".xaml",
+            Filter = "XAML pictures |*.xaml"
+        } is var dlg && dlg.ShowDialog() == true)
+        {
+            XamlWriter.Save(MainCanvas.Children, System.IO.File.CreateText(dlg.FileName));
+        }
+    }
 }
 
